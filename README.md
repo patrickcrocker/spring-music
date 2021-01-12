@@ -1,6 +1,8 @@
 Spring Music
 ============
 
+[![CI Builds](https://ci.nulldriver.com/api/v1/teams/apps/pipelines/spring-music/jobs/build/badge)](https://ci.nulldriver.com/teams/apps/pipelines/spring-music)
+
 This is a sample application for using database services on [Cloud Foundry](http://cloudfoundry.org) with the [Spring Framework](http://spring.io) and [Spring Boot](http://projects.spring.io/spring-boot/).
 
 This application has been built to store the same domain objects in one of a variety of different persistence technologies - relational, document, and key-value stores. This is not meant to represent a realistic use case for these technologies, since you would typically choose the one most applicable to the type of data you need to store, but it is useful for testing and experimenting with different types of services on Cloud Foundry.
@@ -11,7 +13,7 @@ The application use Spring Java configuration and [bean profiles](http://docs.sp
 
 This project requires Java 8 or later to compile.
 
-To build a runnable Spring Boot jar file, run the following command: 
+To build a runnable Spring Boot jar file, run the following command:
 
 ~~~
 $ ./gradlew clean assemble
