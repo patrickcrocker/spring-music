@@ -1,0 +1,118 @@
+---
+jobs:
+- name: build
+  public: true
+  serial_groups: [version]
+  plan:
+  - in_parallel:
+    - get: spring-music
+      trigger: true
+    - get: version
+      params: {pre: rc}
+  - task: assemble
+    config:
+      platform: linux
+      image_resource:
+        type: registry-image
+        source:
+          repository: adoptopenjdk/openjdk8
+          tag: 'alpine-slim'
+      inputs:
+      - name: spring-music
+      - name: version
+      outputs:
+      - name: spring-music
+      caches:
+      - path: .gradle
+      run:
+        dir: spring-music
+        path: sh
+        args:
+        - -exc
+        - |
+          version=$(cat ../version/version)
+          ./gradlew assemble --gradle-user-home ../.gradle
+          # TODO: find a better way to set the build version number on the built artifact
+          mv build/libs/spring-music-*.jar build/libs/spring-music-$version.jar
+  - put: artifact
+    params:
+      file: spring-music/build/libs/spring-music-*.jar
+      version_file: version/version
+
+- name: deploy
+  public: true
+  serial_groups: [version]
+  plan:
+  - get: artifact
+    passed: [build]
+    trigger: true
+  - put: cloud-foundry
+    params:
+      commands:
+      - command: create-org
+      - command: create-space
+      - command: create-service
+        service: p.mysql
+        plan: db-small
+        service_instance: spring-music-db
+        wait_for_service: true
+      - command: push
+        path: artifact/spring-music-*.jar
+        manifest:
+          applications:
+          - name: spring-music
+            memory: 1G
+            buildpacks:
+            - java_buildpack_offline
+            env:
+              JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
+              JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '{enabled: false}'
+            services:
+            - spring-music-db
+
+resources:
+- name: spring-music
+  type: git
+  source:
+    uri: ((git-uri))
+    private_key: ((git_key.private_key))
+
+- name: version
+  type: semver
+  source:
+    driver: git
+    initial_version: 1.0.0-rc.0
+    uri: ((git-uri))
+    branch: version
+    file: version
+    private_key: ((git_key.private_key))
+
+- name: artifact
+  type: maven-resource
+  source:
+    url: ((maven-url))
+    artifact: com.example:spring-music:jar
+    username: ((maven.username))
+    password: ((maven.password))
+
+- name: cloud-foundry
+  type: cf-cli-resource
+  source:
+    api: ((cf-api))
+    username: ((cf.username))
+    password: ((cf.password))
+    org: ((cf-org))
+    space: ((cf-space))
+
+resource_types:
+- name: maven-resource
+  type: registry-image
+  source:
+    repository: nulldriver/maven-resource
+    tag: latest
+
+- name: cf-cli-resource
+  type: registry-image
+  source:
+    repository: nulldriver/cf-cli-resource-rc
+    tag: latest
