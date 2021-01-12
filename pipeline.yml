@@ -76,6 +76,10 @@ resources:
   source:
     uri: ((git-uri))
     private_key: ((git_key.private_key))
+    ignore_paths:
+    - LICENSE
+    - pipeline.yml
+    - README.md
 
 - name: version
   type: semver
