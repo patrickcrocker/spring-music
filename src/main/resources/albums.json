@@ -1,58 +1,9 @@
 [
     {
         "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "Nirvana",
-        "title": "Nevermind",
-        "releaseYear": "1991",
-        "genre": "Rock"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "The Beach Boys",
-        "title": "Pet Sounds",
-        "releaseYear": "1966",
-        "genre": "Rock"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "Marvin Gaye",
-        "title": "What's Going On",
-        "releaseYear": "1971",
-        "genre": "Rock"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "Jimi Hendrix Experience",
-        "title": "Are You Experienced?",
-        "releaseYear": "1967",
-        "genre": "Rock"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "U2",
-        "title": "The Joshua Tree",
-        "releaseYear": "1987",
-        "genre": "Rock"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
         "artist": "The Beatles",
         "title": "Abbey Road",
         "releaseYear": "1969",
-        "genre": "Rock"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "Fleetwood Mac",
-        "title": "Rumours",
-        "releaseYear": "1977",
-        "genre": "Rock"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "Elvis Presley",
-        "title": "Sun Sessions",
-        "releaseYear": "1976",
         "genre": "Rock"
     },
     {
@@ -64,58 +15,9 @@
     },
     {
         "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "The Rolling Stones",
-        "title": "Exile on Main Street",
-        "releaseYear": "1972",
-        "genre": "Rock"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "Bruce Springsteen",
-        "title": "Born to Run",
-        "releaseYear": "1975",
-        "genre": "Rock"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "The Clash",
-        "title": "London Calling",
-        "releaseYear": "1980",
-        "genre": "Rock"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "The Eagles",
-        "title": "Hotel California",
-        "releaseYear": "1976",
-        "genre": "Rock"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
         "artist": "Led Zeppelin",
-        "title": "Led Zeppelin",
-        "releaseYear": "1969",
-        "genre": "Rock"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "Led Zeppelin",
-        "title": "IV",
-        "releaseYear": "1971",
-        "genre": "Rock"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "Police",
-        "title": "Synchronicity",
-        "releaseYear": "1983",
-        "genre": "Rock"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "U2",
-        "title": "Achtung Baby",
-        "releaseYear": "1991",
+        "title": "Led Zeppelin III",
+        "releaseYear": "1970",
         "genre": "Rock"
     },
     {
@@ -127,79 +29,191 @@
     },
     {
         "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "The Beatles",
-        "title": "Rubber Soul",
-        "releaseYear": "1965",
+        "artist": "The Rolling Stones",
+        "title": "Revolver",
+        "releaseYear": "1966",
         "genre": "Rock"
     },
     {
         "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "The Ramones",
-        "title": "The Ramones",
-        "releaseYear": "1976",
+        "artist": "The Beatles",
+        "title": "Sgt. Pepper's Lonely Hearts Club Band",
+        "releaseYear": "1967",
+        "genre": "Rock"
+    },
+    {
+        "_class": "org.cloudfoundry.samples.music.domain.Album",
+        "artist": "Archspire",
+        "title": "Relentless Mutation",
+        "releaseYear": "2017",
+        "genre": "Metal"
+    },
+    {
+        "_class": "org.cloudfoundry.samples.music.domain.Album",
+        "artist": "Johnny Cash",
+        "title": "The Essential Johnny Cash",
+        "releaseYear": "2002",
+        "genre": "Country"
+    },
+    {
+        "_class": "org.cloudfoundry.samples.music.domain.Album",
+        "artist": "Matt Maeson",
+        "title": "Bank on the Funeral",
+        "releaseYear": "2019",
+        "genre": "Alternative"
+    },
+    {
+        "_class": "org.cloudfoundry.samples.music.domain.Album",
+        "artist": "Explosions In the Sky",
+        "title": "The Earth Is Not a Cold Dead Place",
+        "releaseYear": "2003",
         "genre": "Rock"
     },
     {
         "_class": "org.cloudfoundry.samples.music.domain.Album",
         "artist": "Queen",
-        "title": "A Night At The Opera",
-        "releaseYear": "1975",
+        "title": "Greatest Hits",
+        "releaseYear": "1981",
         "genre": "Rock"
     },
     {
         "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "Boston",
-        "title": "Don't Look Back",
+        "artist": "Ultimate Sinatra",
+        "title": "Frank Sinatra",
+        "releaseYear": "2015",
+        "genre": "Pop"
+    },
+    {
+        "_class": "org.cloudfoundry.samples.music.domain.Album",
+        "artist": "Gerry Rafferty",
+        "title": "City to City",
         "releaseYear": "1978",
         "genre": "Rock"
     },
     {
         "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "BB King",
-        "title": "Singin' The Blues",
-        "releaseYear": "1956",
-        "genre": "Blues"
+        "artist": "Gerry Rafferty",
+        "title": "Blood and Glory",
+        "releaseYear": "1988",
+        "genre": "Rock"
     },
     {
         "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "Albert King",
-        "title": "Born Under A Bad Sign",
-        "releaseYear": "1967",
-        "genre": "Blues"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "Muddy Waters",
-        "title": "Folk Singer",
-        "releaseYear": "1964",
-        "genre": "Blues"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "The Fabulous Thunderbirds",
-        "title": "Rock With Me",
-        "releaseYear": "1979",
-        "genre": "Blues"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "Robert Johnson",
-        "title": "King of the Delta Blues",
-        "releaseYear": "1961",
-        "genre": "Blues"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "Stevie Ray Vaughan",
-        "title": "Texas Flood",
-        "releaseYear": "1983",
-        "genre": "Blues"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "Stevie Ray Vaughan",
-        "title": "Couldn't Stand The Weather",
+        "artist": "Bruce Springsteen",
+        "title": "Born In the U.S.A.",
         "releaseYear": "1984",
-        "genre": "Blues"
+        "genre": "Rock"
+    },
+    {
+        "_class": "org.cloudfoundry.samples.music.domain.Album",
+        "artist": "The Rolling Stones",
+        "title": "Hot Rocks 1964-1971",
+        "releaseYear": "1972",
+        "genre": "Rock"
+    },
+    {
+        "_class": "org.cloudfoundry.samples.music.domain.Album",
+        "artist": "Led Zeppelin",
+        "title": "Led Zeppelin IV",
+        "releaseYear": "1971",
+        "genre": "Rock"
+    },
+    {
+        "_class": "org.cloudfoundry.samples.music.domain.Album",
+        "artist": "Various Artists",
+        "title": "Guardians of the Galaxy: Awesome Mix Vol. 1",
+        "releaseYear": "2017",
+        "genre": "Soundtrack"
+    },
+    {
+        "_class": "org.cloudfoundry.samples.music.domain.Album",
+        "artist": "Rush",
+        "title": "2112",
+        "releaseYear": "1976",
+        "genre": "Rock"
+    },
+    {
+        "_class": "org.cloudfoundry.samples.music.domain.Album",
+        "artist": "Pink Floyd",
+        "title": "The Dark Side of the Moon",
+        "releaseYear": "1973",
+        "genre": "Rock"
+    },
+    {
+        "_class": "org.cloudfoundry.samples.music.domain.Album",
+        "artist": "The Beatles",
+        "title": "Let It Be",
+        "releaseYear": "1970",
+        "genre": "Rock"
+    },
+    {
+        "_class": "org.cloudfoundry.samples.music.domain.Album",
+        "artist": "Van Halen",
+        "title": "Van Halen",
+        "releaseYear": "1978",
+        "genre": "Hard Rock"
+    },
+    {
+        "_class": "org.cloudfoundry.samples.music.domain.Album",
+        "artist": "The Beatles",
+        "title": "Yellow Submarine Songtrack",
+        "releaseYear": "1999",
+        "genre": "Soundtrack"
+    },
+    {
+        "_class": "org.cloudfoundry.samples.music.domain.Album",
+        "artist": "The Beatles",
+        "title": "A Hard Day's Night",
+        "releaseYear": "1964",
+        "genre": "Rock"
+    },
+    {
+        "_class": "org.cloudfoundry.samples.music.domain.Album",
+        "artist": "Bruce Hornsby & The Range",
+        "title": "The Way It Is",
+        "releaseYear": "1986",
+        "genre": "Rock"
+    },
+    {
+        "_class": "org.cloudfoundry.samples.music.domain.Album",
+        "artist": "Louis Armstrong",
+        "title": "The Platinum Collection",
+        "releaseYear": "2017",
+        "genre": "Jazz"
+    },
+    {
+        "_class": "org.cloudfoundry.samples.music.domain.Album",
+        "artist": "Nat King Cole",
+        "title": "Unforgettable",
+        "releaseYear": "1954",
+        "genre": "Jazz"
+    },
+    {
+        "_class": "org.cloudfoundry.samples.music.domain.Album",
+        "artist": "Creedence Clearwater Revival",
+        "title": "Chronicle, Vol. 1",
+        "releaseYear": "1976",
+        "genre": "Rock"
+    },
+    {
+        "_class": "org.cloudfoundry.samples.music.domain.Album",
+        "artist": "A Perfect Circle",
+        "title": "Thirteenth Step",
+        "releaseYear": "2003",
+        "genre": "Hard Rock"
+    },
+    {
+        "_class": "org.cloudfoundry.samples.music.domain.Album",
+        "artist": "Zig Zags",
+        "title": "Ripping Death /​ Riddle of Steel - Single",
+        "releaseYear": "2017",
+        "genre": "Hard Rock"
+    },
+    {
+        "_class": "org.cloudfoundry.samples.music.domain.Album",
+        "artist": "The Dillinger Escape Plan",
+        "title": "Calculating Infinity",
+        "releaseYear": "1999",
+        "genre": "Metal"
     }
 ]
