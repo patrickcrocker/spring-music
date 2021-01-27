@@ -38,6 +38,8 @@ jobs:
     params:
       file: spring-music/build/libs/spring-music-*.jar
       version_file: version/version
+  - put: version
+    params: {file: version/version}
 
 - name: deploy
   public: true
@@ -51,6 +53,8 @@ jobs:
       commands:
       - command: create-org
       - command: create-space
+      - command: create-domain
+        domain: ((app-route))
       - command: create-service
         service: p.mysql
         plan: db-small
@@ -69,6 +73,8 @@ jobs:
               JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '{enabled: false}'
             services:
             - spring-music-db
+            routes:
+            - route: ((app-route))
 
 resources:
 - name: spring-music
@@ -95,7 +101,7 @@ resources:
   type: maven-resource
   source:
     url: ((maven-url))
-    artifact: com.example:spring-music:jar
+    artifact: org.cloudfoundry.samples:spring-music:jar
     username: ((maven.username))
     password: ((maven.password))
 
