@@ -7,9 +7,8 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
-import static org.hamcrest.Matchers.containsString;
+import static org.junit.Assert.assertTrue;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(ErrorController.class)
@@ -21,17 +20,20 @@ public class ErrorControllerTest {
     @Test
     public void testThrowException() throws Exception {
         try {
-            mockMvc.perform(get("/errors/throw"))
-                    .andExpect(status().is5xxServerError());
+            mockMvc.perform(get("/errors/throw"));
+            // If no exception is thrown, fail the test
+            throw new AssertionError("Expected NullPointerException to be thrown");
         } catch (Exception e) {
-            // The controller throws a NullPointerException which may not be caught by MockMvc
+            // The controller throws a NullPointerException which may be wrapped in ServletException
             // Verify that the root cause is the expected exception
             Throwable cause = e;
             while (cause.getCause() != null) {
                 cause = cause.getCause();
             }
-            assert cause instanceof NullPointerException;
-            assert cause.getMessage().contains("Forcing an exception to be thrown");
+            assertTrue("Expected NullPointerException but got " + cause.getClass().getName(),
+                    cause instanceof NullPointerException);
+            assertTrue("Expected message to contain 'Forcing an exception to be thrown'",
+                    cause.getMessage().contains("Forcing an exception to be thrown"));
         }
     }
 
