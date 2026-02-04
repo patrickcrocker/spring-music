@@ -8,6 +8,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 
 @RunWith(SpringRunner.class)
@@ -22,7 +23,7 @@ public class ErrorControllerTest {
         try {
             mockMvc.perform(get("/errors/throw"));
             // If no exception is thrown, fail the test
-            throw new AssertionError("Expected NullPointerException to be thrown");
+            fail("Expected NullPointerException to be thrown");
         } catch (Exception e) {
             // The controller throws a NullPointerException which may be wrapped in ServletException
             // Verify that the root cause is the expected exception
